@@ -23,5 +23,6 @@ while game_is_on:
     if player.crossed_finish_line():
         player.go_home()
         player.speed_up()
+        scoreboard.score_up()
 
 screen.exitonclick()

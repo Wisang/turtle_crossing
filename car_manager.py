@@ -5,6 +5,7 @@ from car import Car
 COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
 STARTING_MOVE_DISTANCE = 5
 MOVE_INCREMENT = 10
+NUMBER_OF_CARS = 15
 
 
 class CarManager(Turtle):
@@ -13,7 +14,7 @@ class CarManager(Turtle):
         self.hideturtle()
         self.cars = []
 
-        for i in range(20):
+        for i in range(NUMBER_OF_CARS):
             self.cars.append(Car())
 
     def play(self):
