@@ -5,7 +5,7 @@ from car import Car
 COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
 STARTING_MOVE_DISTANCE = 5
 MOVE_INCREMENT = 10
-NUMBER_OF_CARS = 15
+NUMBER_OF_CARS = 20
 
 
 class CarManager(Turtle):
@@ -22,4 +22,7 @@ class CarManager(Turtle):
             car.setheading(180)
             car.forward(MOVE_INCREMENT)
             if car.xcor() < -280:
-                car.goto(280, random.randint(-280, 280))
+                car.goto(480, random.randint(-480, 480))
+
+    def get_cars(self):
+        return self.cars

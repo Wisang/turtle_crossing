@@ -1,8 +1,8 @@
 from turtle import Turtle
 
-STARTING_POSITION = (0, -280)
+STARTING_POSITION = (0, -460)
 MOVE_DISTANCE = 10
-FINISH_LINE_Y = 280
+FINISH_LINE_Y = 480
 
 
 class Player(Turtle):
@@ -16,7 +16,6 @@ class Player(Turtle):
 
     def move(self):
         self.forward(self.move_step)
-        print("up pressed")
 
     def speed_up(self):
         self.move_step *= 1.2

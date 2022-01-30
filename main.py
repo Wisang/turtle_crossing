@@ -1,12 +1,11 @@
 import time
-from distutils.command.install import key
 from turtle import Screen
 from player import Player
 from car_manager import CarManager
 from scoreboard import Scoreboard
 
 screen = Screen()
-screen.setup(width=600, height=600)
+screen.setup(width=1000, height=1000)
 screen.tracer(0)
 
 scoreboard = Scoreboard()
@@ -19,6 +18,11 @@ sleep_time = 0.1
 screen.listen()
 
 screen.onkey(player.move, "u")
+screen.onkeypress(player.move, "u")
+
+cars = car_manager.get_cars()
+
+game_is_on = True
 
 while game_is_on:
     time.sleep(sleep_time)
@@ -29,5 +33,10 @@ while game_is_on:
         player.go_home()
         player.speed_up()
         scoreboard.score_up()
+
+    for car in cars:
+        if player.distance(car) < 15:
+            scoreboard.game_over()
+            game_is_on = False
 
 screen.exitonclick()
