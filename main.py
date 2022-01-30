@@ -13,10 +13,15 @@ player = Player()
 car_manager = CarManager()
 
 game_is_on = True
+sleep_time = 0.1
+
 while game_is_on:
-    time.sleep(0.1)
+    time.sleep(sleep_time)
     screen.update()
     player.move()
     car_manager.play()
+    if player.crossed_finish_line():
+        player.go_home()
+        player.speed_up()
 
 screen.exitonclick()
