@@ -16,6 +16,7 @@ class Player(Turtle):
 
     def move(self):
         self.forward(self.move_step)
+        print("up pressed")
 
     def speed_up(self):
         self.move_step *= 1.2

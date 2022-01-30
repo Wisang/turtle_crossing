@@ -1,4 +1,5 @@
 import time
+from distutils.command.install import key
 from turtle import Screen
 from player import Player
 from car_manager import CarManager
@@ -15,11 +16,15 @@ car_manager = CarManager()
 game_is_on = True
 sleep_time = 0.1
 
+screen.listen()
+
+screen.onkey(player.move, "u")
+
 while game_is_on:
     time.sleep(sleep_time)
     screen.update()
-    player.move()
     car_manager.play()
+
     if player.crossed_finish_line():
         player.go_home()
         player.speed_up()
