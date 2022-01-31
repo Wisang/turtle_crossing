@@ -15,6 +15,11 @@ class Player(Turtle):
         self.setheading(90)
 
     def move(self):
+        self.setheading(90)
+        self.forward(self.move_step)
+
+    def move_back(self):
+        self.setheading(270)
         self.forward(self.move_step)
 
     def speed_up(self):

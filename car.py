@@ -12,4 +12,4 @@ class Car(Turtle):
         self.color(random.choice(COLORS))
         self.shapesize(1, 2)
         self.penup()
-        self.goto(random.randint(-480, 480), random.randint(-460, 480))
+        self.goto(random.randint(-480, 480), random.randint(-400, 480))

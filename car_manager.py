@@ -22,7 +22,7 @@ class CarManager(Turtle):
             car.setheading(180)
             car.forward(MOVE_INCREMENT)
             if car.xcor() < -280:
-                car.goto(480, random.randint(-480, 480))
+                car.goto(480, random.randint(-400, 480))
 
     def get_cars(self):
         return self.cars
